@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import RecipeCard from '../components/RecipeCard';
+import Link from 'next/link';
+
 
 const recipes = [
     {
@@ -93,17 +95,21 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            <nav className="navbar">
+  <div className="logo">
+    <img src="images/logo.jpg" className="logo-img" />
+  </div>
+  <h3 className="page-heading">Delicious Recipe Cards</h3>
+</nav>
+
+
             <main>
-                <h1>Delicious Recipes</h1>
                 <div className="recipe-cards-container">
                     {recipes.map((recipe) => (
                         <RecipeCard key={recipe.id} recipe={recipe} />
                     ))}
                 </div>
             </main>
-
-            <footer>
-            </footer>
         </div>
     );
 }

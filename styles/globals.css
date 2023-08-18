@@ -5,21 +5,45 @@ body {
   padding: 0;
 }
 
-h1 {
-  text-align: center;
-}
-
 /* Recipe Cards Container */
 .recipe-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
+  margin-top: 20px;
 }
 
-/* Recipe Card Styles */
+/* Navbar */
+.navbar {
+  background-color: #735656;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 3px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 40px; /* Adjust the max height as needed */
+}
+
+
+.page-heading {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Recipe Card */
 .recipe-card {
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: #d8a272;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
@@ -53,8 +77,6 @@ h1 {
 .recipe-details {
   margin-top: 10px;
 }
-
-/* Responsive Styles */
 
 /* Adjust layout for smaller screens (e.g., tablets) */
 @media screen and (max-width: 768px) {
